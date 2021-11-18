@@ -1,0 +1,8 @@
+{
+	"language": "cpp",
+	"time_limit": 1000,
+	"memory_limit": 150000,
+	"checker_type": "default",
+	"default_checker": "lcmp",
+	"expected_verdict": "tle"
+}
