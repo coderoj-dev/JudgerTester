@@ -5,11 +5,22 @@ namespace JudgerTest\Generator;
 class TestGenerator
 {
     private $dataNo;
-    private $url = "http://165.22.215.250/JudgerController/judger/judger-grkxwfpjrf";
+    private $url;
 
     public function __construct($no)
     {
         $this->dataNo = $no;
+        $this->setUrl();
+    }
+
+    /*
+    - set url from .env using Dotenv package
+    */
+    public function setUrl()
+    {
+        $dotenv = \Dotenv\Dotenv::createMutable('./');
+        $dotenv->load();
+        $this->url = $_ENV['JUDGER_URL'];
     }
 
     public function getData()
